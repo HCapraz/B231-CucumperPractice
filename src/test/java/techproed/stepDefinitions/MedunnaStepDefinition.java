@@ -19,26 +19,37 @@ public class MedunnaStepDefinition {
 
     @When("the user clicks on the user icon")
     public void theUserClicksOnTheUserIcon() {
+
+        medunnaPage.userIcon.click();
     }
 
     @And("clicks on the sign in option")
     public void clicksOnTheSignInOption() {
+
+        medunnaPage.signInOption.click();
     }
 
     @And("enters the username in the username field")
     public void entersTheUsernameInTheUsernameField() {
+
+        medunnaPage.usernameInput.sendKeys(ConfigReader.getProperty("MedunnaUsername"));
     }
 
     @And("enters the password in the password field")
     public void entersThePasswordInThePasswordField() {
+
+        medunnaPage.passwordInput.sendKeys(ConfigReader.getProperty("MedunnaPassword"));
     }
 
     @And("clicks on the sign in button")
     public void clicksOnTheSignInButton() {
+
+        medunnaPage.signInSubmitButton.click();
     }
 
     @And("clicks on the Items and Titles option")
     public void clicksOnTheItemsAndTitlesOption() {
+
     }
 
     @And("clicks on the room option")
